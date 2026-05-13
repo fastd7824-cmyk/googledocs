@@ -1,0 +1,601 @@
+body.editor-body {
+    background: linear-gradient(180deg, #f8fafc 0%, #eef4ff 58%, #edf7f2 100%);
+}
+
+.docs-editor-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+}
+
+.docs-editor-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    align-items: center;
+    padding: 18px 22px 8px;
+    flex-wrap: wrap;
+}
+
+.docs-editor-brand,
+.docs-editor-controls,
+.docs-toolbar-meta,
+.docs-toolbar-left,
+.docs-toolbar-right,
+.docs-header-actions,
+.docs-menu-bar,
+.docs-menu-dropdown button,
+.docs-modal-header,
+.docs-modal-footer,
+.docs-side-actions,
+.docs-collaborator-stack,
+.docs-avatar-row,
+.docs-presence-item {
+    display: flex;
+    align-items: center;
+}
+
+.docs-editor-brand,
+.docs-header-actions {
+    gap: 14px;
+}
+
+.docs-title-stack {
+    display: grid;
+    gap: 8px;
+}
+
+.docs-logo-link {
+    display: inline-grid;
+    place-items: center;
+}
+
+.docs-logo-mark {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #0078d4, #2563eb);
+    color: #fff;
+    box-shadow: 0 14px 28px rgba(0, 120, 212, 0.2);
+}
+
+.docs-title-input {
+    min-width: 320px;
+    max-width: min(680px, 64vw);
+    border: 0;
+    background: transparent;
+    font-size: 1.45rem;
+    font-weight: 700;
+    font-family: "Space Grotesk", "Manrope", sans-serif;
+    color: var(--text);
+    outline: none;
+    padding: 2px 0;
+}
+
+.docs-header-link,
+.docs-chip,
+.docs-meta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 38px;
+    padding: 0 12px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.82);
+    color: var(--text);
+}
+
+.docs-header-link {
+    cursor: pointer;
+}
+
+.docs-editor-controls {
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.docs-select,
+.docs-primary-btn,
+.docs-secondary-btn,
+.docs-icon-btn,
+.docs-side-btn {
+    border-radius: 8px;
+    min-height: 44px;
+    border: 1px solid var(--line);
+    font-weight: 700;
+}
+
+.docs-select {
+    background: rgba(255, 255, 255, 0.94);
+    color: var(--text);
+    padding: 0 14px;
+}
+
+.docs-primary-btn,
+.docs-secondary-btn,
+.docs-side-btn {
+    padding: 0 16px;
+}
+
+.docs-primary-btn {
+    border-color: transparent;
+    background: #0f6cbd;
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(15, 108, 189, 0.22);
+}
+
+.docs-secondary-btn,
+.docs-side-btn {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--text);
+}
+
+.docs-icon-btn {
+    width: 40px;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--text);
+}
+
+.docs-collaborator-stack {
+    gap: 10px;
+}
+
+.docs-avatar-row {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    min-width: 38px;
+}
+
+.docs-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: inline-grid;
+    place-items: center;
+    border: 2px solid #fff;
+    margin-left: -8px;
+    background: #107c41;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    box-shadow: 0 6px 16px rgba(16, 124, 65, 0.22);
+}
+
+.docs-avatar:first-child {
+    margin-left: 0;
+}
+
+.docs-live-pill {
+    min-height: 36px;
+    padding: 0 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(16, 124, 65, 0.2);
+    background: rgba(16, 124, 65, 0.1);
+    color: #0f6c3b;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 0.88rem;
+}
+
+.docs-live-pill i {
+    font-size: 0.54rem;
+}
+
+.docs-live-pill.is-syncing {
+    border-color: rgba(0, 120, 212, 0.2);
+    background: rgba(0, 120, 212, 0.1);
+    color: #0f6cbd;
+}
+
+.docs-live-pill.is-warning {
+    border-color: rgba(245, 158, 11, 0.22);
+    background: rgba(245, 158, 11, 0.12);
+    color: #9a5b00;
+}
+
+.docs-menu-bar {
+    gap: 2px;
+    padding: 0 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.55);
+    border-bottom: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(16px);
+    position: sticky;
+    top: 0;
+    z-index: 25;
+    flex-wrap: wrap;
+}
+
+.docs-menu-group {
+    position: relative;
+}
+
+.docs-menu-trigger {
+    min-height: 42px;
+    padding: 0 12px;
+    border: 0;
+    background: transparent;
+    color: #1f2937;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.docs-menu-trigger:hover,
+.docs-menu-group.open .docs-menu-trigger {
+    background: rgba(0, 120, 212, 0.1);
+}
+
+.docs-menu-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 250px;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.86);
+    box-shadow: var(--shadow-lg);
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    z-index: 30;
+}
+
+.docs-menu-group.open .docs-menu-dropdown {
+    display: flex;
+}
+
+.docs-menu-dropdown button {
+    justify-content: flex-start;
+    gap: 10px;
+    min-height: 42px;
+    padding: 0 12px;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--text);
+    text-align: left;
+}
+
+.docs-menu-dropdown button:hover {
+    background: var(--surface-accent);
+}
+
+.docs-menu-divider {
+    height: 1px;
+    margin: 6px 0;
+    background: var(--line);
+}
+
+.docs-toolbar-shell {
+    padding: 14px 22px 0;
+}
+
+.docs-toolbar-meta {
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.docs-toolbar-left,
+.docs-toolbar-right,
+.docs-side-actions {
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.docs-ruler {
+    margin-top: 12px;
+    padding: 10px 18px;
+    border-radius: 8px 8px 0 0;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.74);
+    border-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.docs-editor-shell {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 20px;
+    padding: 0 22px 24px;
+}
+
+.docs-editor-sidebar {
+    padding: 20px 0 0;
+    display: grid;
+    gap: 16px;
+    align-content: start;
+}
+
+.docs-side-card {
+    padding: 20px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #1f2937, #172033);
+    color: #fff;
+    box-shadow: var(--shadow-md);
+}
+
+.docs-side-card h3 {
+    margin: 0 0 10px;
+    font-family: "Space Grotesk", "Manrope", sans-serif;
+}
+
+.docs-side-card p,
+.docs-side-list {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.65;
+}
+
+.docs-presence-list {
+    display: grid;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.docs-presence-item {
+    gap: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.docs-presence-item .docs-avatar {
+    margin-left: 0;
+    flex: 0 0 auto;
+}
+
+.docs-presence-item span:last-child {
+    display: grid;
+    gap: 2px;
+}
+
+.docs-presence-item small {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.78rem;
+}
+
+.docs-side-list {
+    padding-left: 18px;
+    margin-top: 12px;
+}
+
+.docs-canvas-wrap {
+    min-width: 0;
+    padding-bottom: 26px;
+}
+
+.docs-page-surface {
+    padding: 0 0 30px;
+}
+
+.docs-editor-stage {
+    width: min(980px, 100%);
+    margin: 0 auto;
+    border-radius: 0 0 8px 8px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.74);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.editor-body.focus-layout .docs-ruler,
+.editor-body.focus-layout .docs-editor-sidebar {
+    display: none;
+}
+
+.editor-body.focus-layout .docs-editor-shell {
+    grid-template-columns: 1fr;
+}
+
+.editor-body.focus-layout .docs-editor-stage {
+    width: min(1120px, 100%);
+}
+
+.editor-body.hide-toolbar .ql-toolbar.ql-snow {
+    display: none;
+}
+
+.editor-body.hide-sidebar .docs-editor-shell {
+    grid-template-columns: 1fr;
+}
+
+.editor-body.hide-sidebar .docs-editor-sidebar {
+    display: none;
+}
+
+.ql-toolbar.ql-snow {
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    background: #fff;
+    position: sticky;
+    top: 43px;
+    z-index: 20;
+}
+
+.ql-container.ql-snow {
+    border: 0;
+    min-height: 76vh;
+    font-family: "Source Sans 3", "Segoe UI", sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.ql-editor {
+    padding: 42px 56px 60px;
+    background: #fff;
+    min-height: 960px;
+    box-shadow: inset 0 0 0 1px rgba(17, 24, 39, 0.04);
+}
+
+.ql-editor hr {
+    border: 0;
+    border-top: 2px solid #d9e2f6;
+    margin: 24px 0;
+}
+
+.docs-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(7, 16, 44, 0.42);
+    backdrop-filter: blur(8px);
+    z-index: 50;
+}
+
+.docs-modal.show {
+    display: flex;
+}
+
+.docs-modal-card {
+    width: min(520px, 100%);
+    padding: 22px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-lg);
+}
+
+.docs-modal-header,
+.docs-modal-footer {
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.docs-attachments-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.docs-attachments-list {
+    display: grid;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.docs-attachment-item {
+    padding: 14px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.docs-attachment-item strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.docs-attachment-meta {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.docs-attachment-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.docs-attachment-actions button,
+.docs-attachment-actions a {
+    min-height: 34px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.84rem;
+}
+
+.docs-attachment-actions a {
+    text-decoration: none;
+}
+
+.docs-attachment-empty {
+    color: rgba(255, 255, 255, 0.74);
+    line-height: 1.6;
+    font-size: 0.92rem;
+}
+
+.docs-modal-header h3 {
+    margin: 0;
+    font-family: "Space Grotesk", "Manrope", sans-serif;
+}
+
+.docs-modal-body {
+    display: grid;
+    gap: 16px;
+    margin: 18px 0;
+}
+
+.docs-info-copy {
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.docs-info-copy p,
+.docs-info-copy ul {
+    margin: 0 0 12px;
+}
+
+@media (max-width: 1100px) {
+    .docs-editor-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .docs-editor-sidebar {
+        order: 2;
+    }
+}
+
+@media (max-width: 760px) {
+    .docs-editor-header,
+    .docs-toolbar-shell,
+    .docs-editor-shell {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .docs-title-input {
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .docs-menu-bar {
+        overflow-x: auto;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+    }
+
+    .docs-menu-dropdown {
+        position: fixed;
+        left: 12px;
+        right: 12px;
+        top: 124px;
+        min-width: 0;
+    }
+
+    .ql-editor {
+        padding: 28px 18px 36px;
+    }
+}

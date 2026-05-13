@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/tg%20computer/Desktop/git/project-root/src/java/com/app/controller/LoginServlet.java</file>
+            <file>file:/C:/Users/tg%20computer/Desktop/git/project-root/src/java/com/app/controller/AttachmentServlet.java</file>
+            <file>file:/C:/Users/tg%20computer/Desktop/git/project-root/src/java/com/app/controller/AdminServlet.java</file>
+            <file>file:/C:/Users/tg%20computer/Desktop/git/project-root/src/java/com/app/util/GenerateHash.java</file>
+            <file>file:/C:/Users/tg%20computer/Desktop/git/project-root/src/java/com/app/controller/DashboardServlet.java</file>
+            <file>file:/C:/Users/tg%20computer/Desktop/git/project-root/src/java/com/app/util/ValidationUtil.java</file>
+            <file>file:/C:/Users/tg%20computer/Desktop/git/project-root/src/java/com/app/util/ConnectionPool.java</file>
+            <file>file:/C:/Users/tg%20computer/Desktop/git/project-root/src/java/com/app/config/DatabaseConfig.java</file>
+            <file>file:/C:/Users/tg%20computer/Desktop/git/project-root/src/java/com/app/controller/RegisterServlet.java</file>
+            <file>file:/C:/Users/tg%20computer/Desktop/git/project-root/src/java/com/app/controller/DocumentServlet.java</file>
+            <file>file:/C:/Users/tg%20computer/Desktop/git/project-root/src/java/com/app/util/PasswordUtil.java</file>
+        </group>
+    </open-files>
+</project-private>
